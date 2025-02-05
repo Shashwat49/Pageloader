@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Loader</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: aquamarine;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 4px;
+            transition: 1s ease-in-out;
+        }
+        .box1 {
+            animation: arch 1.25s ease-in-out infinite;
+        }
+        .box2 {
+            animation: shift 1.25s ease-in-out infinite;
+        }
+        .box3 {
+            animation: shift2 1.25s ease-in-out infinite 0.1s;
+        }
+        @keyframes arch {
+            50% {
+                transform: translate(30px, -80px) rotateZ(45deg);
+                background-color: blueviolet;
+                border-radius: 50%;
+            }
+            100% {
+                transform: translate(60px, -5px) rotateZ(90deg);
+                background-color: yellow;
+            }
+        }
+
+        @keyframes shift {
+            100% {
+                transform: translateX(-120px);
+                background-color: greenyellow;
+            }
+        }
+        @keyframes shift2 {
+            100% {
+                transform: translateX(-120px);
+                background-color: pink;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+    </div>
+</body>
+</html>

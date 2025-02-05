@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Loader</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: yellow;
+            border-radius: 50%;
+            margin: 5px;
+            transition: ease-in-out;
+        }
+
+        .box1 {
+            animation: box1 1s ease-in-out infinite;
+        }
+        .box2 {
+            animation: box1 1s ease-in-out infinite 0.5s;
+        }
+        .box3 {
+            animation: box1 1s ease-in-out infinite 1.4s;
+        }
+        .box4 {
+            animation: box1 1s ease-in-out infinite 2.2s;
+        }
+        .box5 {
+            animation: box1 1s ease-in-out infinite 3.1s;
+        }
+
+        @keyframes box1 {
+            50% {
+                transform: translateY(-60px);
+                background-color: indianred;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+        <div class="box box5"></div>
+    </div>
+</html>
